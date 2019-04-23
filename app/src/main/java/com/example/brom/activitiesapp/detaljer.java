@@ -20,11 +20,19 @@ public class detaljer extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        Log.d("a18lukto", "Fick följande från main activitt: "+message );
+        String mountname = intent.getStringExtra(MainActivity.EXTRA_NAME);
+        String mountlocation = intent.getStringExtra(MainActivity.EXTRA_LOCATION);
+        String mountheight = intent.getStringExtra(MainActivity.EXTRA_HEIGHT);
+        Log.d("a18lukto", "Fick följande från main activitt: "+mountname );
 
-        TextView textView = findViewById(R.id.textDetaljer);
-        textView.setText(message);
+        TextView headerView = findViewById(R.id.textDetaljerHeader);
+        headerView.setText(mountname);
+
+        TextView textView1 = findViewById(R.id.textDetaljerText);
+        textView1.setText(mountlocation);
+
+        TextView textView2 = findViewById(R.id.textDetaljerText2);
+        textView2.setText(mountheight);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
