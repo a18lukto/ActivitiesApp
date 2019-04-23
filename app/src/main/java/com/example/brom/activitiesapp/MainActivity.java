@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String EXTRA_MESSAGE = "Lukas";
     private String[] mountainNames = {"Matterhorn","Mont Blanc","Denali"};
     private String[] mountainLocations = {"Alps","Alps","Alaska"};
     private int[] mountainHeights ={4478,4808,6190};
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,10 +53,13 @@ public class MainActivity extends AppCompatActivity {
         my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Toast.makeText(getApplicationContext(), lukasBerg.get(position).info(), Toast.LENGTH_SHORT).show();
+
 
                 Intent intent = new Intent(getApplicationContext(), detaljer.class);
+                //String donk = lukasBerg(position).info();
+                //intent.putExtra(EXTRA_MESSAGE, donk);
                 startActivity(intent);
+
             }
         });
 

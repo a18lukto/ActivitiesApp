@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name="com.example.brom.listviewjsonapp.Remove"
+            android:label="@string/title_activity_remove"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.brom.activitiesapp.MainActivity" />
+        </activity>
+        <activity
             android:name=".detaljer"
             android:label="@string/title_activity_detaljer"
             android:parentActivityName=".MainActivity"
