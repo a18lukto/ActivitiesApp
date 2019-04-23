@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(getApplicationContext(), detaljer.class);
-                //String donk = lukasBerg(position).info();
-                //intent.putExtra(EXTRA_MESSAGE, donk);
+                String mountainText = lukasBerg.get(position).info();
+                intent.putExtra(EXTRA_MESSAGE, mountainText);
                 startActivity(intent);
 
             }
