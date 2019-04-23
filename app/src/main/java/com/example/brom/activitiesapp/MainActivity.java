@@ -1,11 +1,13 @@
 package com.example.brom.activitiesapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
     private int[] mountainHeights ={4478,4808,6190};
     // Create ArrayLists from the raw data above and use these lists when populating your ListView.
     private ArrayList<Mountain> lukasBerg=new ArrayList<>();
+
+    //public static final String Extra_MESSAGE = "hi";
+    //private EditText mMessageEditText;
 
 
     @Override
@@ -39,11 +44,17 @@ public class MainActivity extends AppCompatActivity {
 
         my_listView.setAdapter(adapter);
 
+
+
+
         //Gör så att Toasten visar rätt information
         my_listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Toast.makeText(getApplicationContext(), lukasBerg.get(position).info(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), detaljer.class);
+                startActivity(intent);
             }
         });
 
