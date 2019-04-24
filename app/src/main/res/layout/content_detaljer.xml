@@ -24,44 +24,47 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textDetaljerHeader"
+                android:id="@+id/textDetaljerText2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_margin="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="180dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toTopOf="@+id/textDetaljerText"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textDetaljerText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_margin="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="92dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="595dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textDetaljerHeader" />
+                app:layout_constraintTop_toBottomOf="@+id/textDetaljerText2" />
 
             <TextView
-                android:id="@+id/textDetaljerText2"
+                android:id="@+id/textDetaljerHeader"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_margin="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginBottom="176dp"
-                app:layout_constraintBottom_toTopOf="@+id/textDetaljerHeader"
+                android:layout_marginBottom="24dp"
+                android:gravity="start"
+                android:textSize="45sp"
+                app:layout_constraintBottom_toTopOf="@+id/textDetaljerText2"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
